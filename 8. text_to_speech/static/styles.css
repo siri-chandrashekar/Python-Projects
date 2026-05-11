@@ -1,0 +1,81 @@
+﻿:root {
+  --bg: #f3f6fb;
+  --card: #ffffff;
+  --text: #1d2433;
+  --muted: #5b657a;
+  --primary: #2457d6;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background:
+    linear-gradient(rgba(12, 18, 32, 0.65), rgba(12, 18, 32, 0.65)),
+    url("https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1800&q=80")
+      center / cover no-repeat fixed;
+  color: var(--text);
+}
+
+.card {
+  width: min(660px, 112vw);
+  background: linear-gradient(rgba(216, 246, 203, 0.55), rgba(169, 179, 164, 0.55));
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 12px 34px rgba(12, 18, 32, 0.26);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.9rem;
+}
+
+p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  color: #fff;
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccd7ef;
+  border-radius: 8px;
+  background: #fafcff;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#readBtn {
+  background: var(--primary);
+  color: #fff;
+}
+
+#stopBtn {
+  background: #c46175;
+  color: #000309;
+}
+
+#status {
+  min-height: 24px;
+  margin-top: 12px;
+}
