@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="shell">
+        <section class="hero">
+            <div class="eyebrow">Image to Palette</div>
+            <h1>
+                <span class="h-word h-word-1">Turn</span>
+                <span class="h-word h-word-2">any</span>
+                <span class="h-word h-word-3">photo</span>
+                <span class="h-word h-word-4">into</span>
+                <span class="h-word h-word-5">a</span>
+                <span class="h-word h-word-6">color</span>
+                <span class="h-word h-word-7">story.</span>
+            </h1>
+            <p class="subtitle">
+                Upload an image and this tool will pull out the most dominant colors so you can
+                use them for design inspiration, branding, or quick visual exploration.
+            </p>
+        </section>
+
+        <section class="content">
+            <aside class="upload-panel">
+                <h2 class="panel-title">Upload an image</h2>
+                <p class="panel-copy">
+                    Choose a photo, illustration, or screenshot. The app will analyze the image
+                    and show the most common colors it finds.
+                </p>
+
+                <form method="POST" enctype="multipart/form-data">
+                    <label class="file-input">
+                        <span>Select an image file to generate a palette.</span>
+                        <input type="file" name="image" accept="image/*" required>
+                    </label>
+                    <button type="submit">Generate Palette</button>
+                </form>
+            </aside>
+
+            <section class="results-panel">
+                <div class="results-header">
+                    <div>
+                        <h2 class="panel-title">Palette Preview</h2>
+                        <p>Your extracted colors will appear here.</p>
+                    </div>
+                </div>
+
+                {% if colors %}
+                <div class="palette">
+                    {% for color in colors %}
+                    <div class="color-card">
+                        <div class="color-box" style="background-color: {{ color }};">
+                            <span class="swatch-label">Color {{ loop.index }}</span>
+                        </div>
+                        <div class="color-info">
+                            <div class="hex">{{ color }}</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="hint">
+                    <p>
+                        No palette yet. Upload an image to generate a set of dominant colors and
+                        preview them as clean swatches.
+                    </p>
+                </div>
+                {% endif %}
+            </section>
+        </section>
+    </main>
+</body>
+</html>
