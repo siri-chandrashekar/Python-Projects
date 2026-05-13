@@ -1,0 +1,4 @@
+﻿# Local generated files
+__pycache__/
+*.pyc
+bbc_us_canada_news.csv
