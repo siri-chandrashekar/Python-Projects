@@ -1,0 +1,198 @@
+﻿body {
+    background: linear-gradient(105deg, #f1b760, #c5e565, #5eb7e8);
+}
+
+.edu-disclaimer {
+    background-color: #c1121f;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 10px 14px;
+}
+
+.page-heading {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #111827;
+    letter-spacing: 0.4px;
+    margin-bottom: 28px;
+    padding-bottom: 12px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.puppy-img {
+    height: 290px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.cart-shell {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.cart-title {
+    font-weight: 800;
+    color: #1f2937;
+}
+
+.cart-table {
+    margin-bottom: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cart-table thead th {
+    background: #1f2937;
+    color: #ffffff;
+    border-bottom: none;
+    letter-spacing: 0.3px;
+}
+
+.cart-table tbody tr {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.cart-table tbody tr:nth-child(even) {
+    background: rgba(243, 244, 246, 0.9);
+}
+
+.cart-table td,
+.cart-table th {
+    padding: 12px 14px;
+    vertical-align: middle;
+}
+
+.fee-free {
+    color: #0f766e;
+    font-weight: 700;
+}
+
+.fee-paid {
+    color: #111827;
+    font-weight: 700;
+}
+
+.cart-remove-btn {
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.cart-total {
+    margin-top: 16px;
+    color: #111827;
+    font-weight: 800;
+}
+
+.cart-empty {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #374151;
+    margin: 8px 0 0;
+}
+
+.cart-actions {
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cart-checkout-btn,
+.cart-continue-btn {
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 10px 16px;
+}
+
+.coffee-offer-banner {
+    background: linear-gradient(90deg, #7f1d1d, #b97a1c, #d0dc26, #1c94b9, #601d7f);
+    background-size: 240% 240%;
+    color: #060606;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 1.35rem;
+    font-weight: 900 !important;
+    text-align: center;
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    letter-spacing: 0.2px;
+    box-shadow: 0 8px 18px rgba(127, 29, 29, 0.28);
+    position: relative;
+    overflow: hidden;
+    animation: coffeeGlow 3.8s ease-in-out infinite, coffeeShift 5s linear infinite;
+}
+
+.coffee-offer-banner::before {
+    content: "\2615";
+    display: inline-block;
+    margin-right: 8px;
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+    animation: coffeeFloat 1.2s ease-in-out infinite;
+}
+
+.coffee-offer-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -35%;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+    transform: skewX(-20deg);
+    animation: coffeeShine 2.8s ease-in-out infinite;
+}
+
+@keyframes coffeeShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes coffeeGlow {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 18px rgba(127, 29, 29, 0.28); }
+    50% { transform: scale(1.012); box-shadow: 0 12px 24px rgba(185, 28, 28, 0.38); }
+}
+
+@keyframes coffeeFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+}
+
+@keyframes coffeeShine {
+    0% { left: -35%; opacity: 0; }
+    30% { opacity: 1; }
+    100% { left: 125%; opacity: 0; }
+}
+
+.quantity-form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.quantity-input {
+    width: 70px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-weight: 600;
+}
+
+.quantity-update-btn {
+    border-radius: 8px;
+    font-weight: 700;
+    padding: 4px 10px;
+}

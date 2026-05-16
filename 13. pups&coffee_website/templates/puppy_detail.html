@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="coffee-offer-banner">
+    Adopt today and get 3 months of coffee free.
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <img src="{{ url_for('static', filename=puppy.image) }}" 
+             class="img-fluid rounded">
+    </div>
+
+    <div class="col-md-6">
+        <h2>{{ puppy.name }}</h2>
+        <p class="text-muted">{{ puppy.breed }} • {{ puppy.age }}</p>
+
+        <p><strong>Description:</strong> {{ puppy.description }}</p>
+        <p><strong>Story:</strong> {{ puppy.story }}</p>
+
+        <p class="fw-bold">
+            {% if puppy.adoption_fee == 0 %}
+                Free Adoption ☕
+            {% else %}
+                ${{ puppy.adoption_fee }}
+            {% endif %}
+        </p>
+
+        <a href="{{ url_for('add_to_cart',  puppy_id=puppy.id)}}" class="btn btn-success">
+            Adopt Me 🐾
+        </a>
+    </div>
+</div>
+
+{% endblock %}
